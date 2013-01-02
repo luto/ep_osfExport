@@ -1,0 +1,11 @@
+{
+  "parts": [
+             {
+               "name": "ep_osfExport",
+               "hooks": {
+                          "eejsBlock_exportColumn" : "ep_osfExport/index:eejsBlock_exportColumn"
+                        }
+             }
+           ]
+}
+
