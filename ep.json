@@ -4,7 +4,11 @@
                "name": "ep_osfExport",
                "hooks": {
                           "eejsBlock_exportColumn" : "ep_osfExport/index:eejsBlock_exportColumn"
-                        }
+                        },
+               "client_hooks": {
+			                     "documentReady" : "ep_osfExport/static/js/index:documentReady",
+			                     "postAceInit" : "ep_osfExport/static/js/index:postAceInit"
+							   }
              }
            ]
 }

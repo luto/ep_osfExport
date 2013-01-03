@@ -1,7 +1,7 @@
 {
   "@metadata": { "authors": { "0": "luto" } },
   "pad.importExport.osfexport": "OSF-Export",
-  "pad.importExport.exportOsfChapter": "Chapter-Liste",
+  "pad.importExport.exportOsfChapter": "Chapter-List",
   "pad.importExport.exportOsfHTML": "anyca.st-HTML",
   "pad.importExport.exportOsfParser": "To OSF-Parser"
 }
