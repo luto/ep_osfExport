@@ -3,7 +3,8 @@
              {
                "name": "ep_osfExport",
                "hooks": {
-                          "eejsBlock_exportColumn" : "ep_osfExport/index:eejsBlock_exportColumn"
+                          "eejsBlock_exportColumn" : "ep_osfExport/index:eejsBlock_exportColumn",
+                          "eejsBlock_styles" : "ep_osfExport/index:eejsBlock_styles"
                         },
                "client_hooks": {
 			                     "documentReady" : "ep_osfExport/static/js/index:documentReady",
