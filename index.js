@@ -2,8 +2,7 @@ var eejs = require('ep_etherpad-lite/node/eejs');
 
 exports.eejsBlock_exportColumn = function(hook, context)
 {
-  var osfExports = eejs.require("ep_osfExport/templates/osfExports.ejs");
-  context.content = context.content + osfExports;
+  context.content = eejs.require("ep_osfExport/templates/osfExports.ejs");
 }
 
 exports.eejsBlock_styles = function (hook, context)
