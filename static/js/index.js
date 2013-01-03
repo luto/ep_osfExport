@@ -4,7 +4,7 @@ exports.documentReady = function(hook, context)
 {
   $("#exportOsfChapter").click(function() { export_to_osf('chapter') });
   $("#exportOsfHTML").click(function() { export_to_osf('anycast-full') });
-  $("#exportOsfParser").click(function() { post_to_url('http://tools.shownot.es/parser/', {'padcontent':ace.exportText()}) });
+  $("#exportOsfParser").click(function() { post_to_url(osfExportSettings.osfParser, {'padcontent':ace.exportText()}) });
 }
 
 exports.postAceInit = function(hook, context)
@@ -37,13 +37,18 @@ function post_to_url(path,params)
 function export_to_osf(exportmode)
 {
   var padcontent = ace.exportText();
-  post_to_url('http://cdn.simon.waldherr.eu/projects/osf-parser-suite/api/',
+  var postVars =
     {
-      'amazon':'shownot.es-21',
-      'thomann':'93439',
       'fullmode':1,
       'pad':padcontent,
       'download':1,
       'exportmode':exportmode
-    });
+    };
+  
+  for (var affl in osfExportSettings.affiliates)
+  {
+    postVars[affl] = osfExportSettings.affiliates[affl];
+  }
+  
+  post_to_url(osfExportSettings.osfApi, postVars);
 }
