@@ -5,11 +5,18 @@ exports.documentReady = function(hook, context)
   $("#exportOsfChapter").click(function() { export_to_osf('chapter') });
   $("#exportOsfHTML").click(function() { export_to_osf('anycast-full') });
   $("#exportOsfParser").click(function() { post_to_url(osfExportSettings.osfParser, {'padcontent':ace.exportText()}) });
+  
+  $("#importexport").css('width', '220px');
+  $("#importexport h1").css('display', 'none');
+  $("#importexport div.column").eq(1).css('width', '100%');
 }
 
 exports.postAceInit = function(hook, context)
 {
   ace = context.ace;
+  // Has be be here and not in documentReady because we
+  // need to overwrite the i10n-value.  hax.. I know..
+  $("#importexportlink").attr("title", "Export");
 }
 
 // Original code by simonwaldherr, http://shownotes.github.com/EtherpadBookmarklets/

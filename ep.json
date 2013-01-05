@@ -4,6 +4,7 @@
                "name": "ep_osfExport",
                "hooks": {
                           "eejsBlock_exportColumn" : "ep_osfExport/index:eejsBlock_exportColumn",
+                          "eejsBlock_importColumn" : "ep_osfExport/index:eejsBlock_importColumn",
                           "eejsBlock_styles" : "ep_osfExport/index:eejsBlock_styles",
                           "eejsBlock_scripts" : "ep_osfExport/index:eejsBlock_scripts"
                         },

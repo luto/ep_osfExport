@@ -6,6 +6,11 @@ exports.eejsBlock_exportColumn = function(hook, context)
   context.content = eejs.require("ep_osfExport/templates/osfExports.ejs");
 }
 
+exports.eejsBlock_importColumn = function(hook, context)
+{
+  context.content = "";
+}
+
 exports.eejsBlock_styles = function (hook, context)
 {
   context.content = context.content + eejs.require("ep_osfExport/templates/styles.ejs");
